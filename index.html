@@ -16,24 +16,26 @@
   <nav class="navbar navbar-light bg-light">
   
     <button class="p-3 m-3 btn btn-outline-success" id="score" type="button">High Scores</button>
-    <p class="p-3 mr-4">timer</p>
+    <p class="p-3 mr-4" id="timer">timer</p>
     
   </form>
 </nav>
 
+<!-- Questions Section  -->
 <section class="row justify-content-center">
-<div class="card w-50">
+
+<!-- Question 1 -->
+<div class="q1 card w-75 m-3">
   <div class="card-body">
-    <h1 class="card-title">question</h1>
+    <h1 class="card-title" id="question">Do you want to take a quiz?</h1>
     
-    <a href="#" class=" mt-3 mb-3 btn btn-primary">Answer 1</a>
-    <br>
-    <a href="#" class=" mb-3 btn btn-primary">Answer 2</a>
-    <br>
-    <a href="#" class=" mb-3 btn btn-primary">Answer 3</a>
+    <a href="#" class="mb-3 btn btn-primary" id="a1" onclick="nextQuestion()">Yes</a>
+    <a href="#" class="mb-3 btn btn-primary" id="a2" onclick="exit()">No</a>
+    
   </div>
 </div>
-</section>
 
+</section>
+ <script src="./assets/js/script.js"></script>
   </body>
   </html>
