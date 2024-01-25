@@ -38,3 +38,10 @@ q++;
 }
 }
 
+
+function exit(){
+   
+    question.textContent = "Ok bye";
+    answer1.remove();
+    answer2.remove();
+}
