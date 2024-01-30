@@ -33,6 +33,7 @@ function nextQuestion(){
         answer1.classList.remove("correct");
         answer2.classList.add("correct");
         addTime();
+         score.innerHTML = "Your Score is " + timeleft;
 
     } else if (q == 1){
         question.textContent = "Conditions in an if/else statement are enclosed in _______?";
@@ -44,6 +45,7 @@ function nextQuestion(){
         answer1.classList.add("correct");
         answer2.classList.remove("correct");
         addTime();
+         score.textContent = "Your Score is " + timeleft;
 
 
     } else if (q == 2){
@@ -58,17 +60,17 @@ function nextQuestion(){
          answer1.classList.add("correct");
         answer2.classList.remove("correct");
         addTime();
+        localStorage.setItem("score", timeleft);
+        score.textContent = "Your Score is " + timeleft;
 
 
 
     } else {
         question.textContent = "Results";
-
         answer1.textContent = "Exit?";
         answer2.textContent = "Play Again?";
         answer3.textContent = "Save Score";
-        localStorage.setItem("score", c);
-        score.textContent = "Your Score is " + c;
+        
      correct();
         q++;
         console.log(q);
@@ -118,6 +120,8 @@ var quizTimer = setInterval(function(){
 
 }
 
+// adds time to the counter correct answer is chosen 
+
 function addTime(seconds){
     timeleft += score;
 
@@ -125,3 +129,8 @@ function addTime(seconds){
 }
 
 updateCountdown();
+
+// TO DO:
+// Stop timer after questions are done answering
+// Log timer aka score to card and local Storage
+// create a screen to save your score to the high scores
